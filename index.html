@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1a901451c6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h4>Hi, my name is </h4>
+            <h1> Raiyan Maksud  </h1>
+            <h3><br> I'm From Dhaka, Bangladesh <br> And I'm a <span>Programmer</span> </h3>
+        </div>
+    </div>
+ </div>
+
+ <!-- -------------About------------- -->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Hi! I'm Raiyan, a Computer Science student. I'm studying in the IT unit under University of Dhaka in 3rd Year.
+                    As I'm an undergraduate, I'm still persuing skills which will be effective for my career.
+                    I am involved in an ongoing project about the e-Library of my campus using HTML, CSS and JavaScript. 
+                    I've completed several courses in platforms like Coursera, HackerRank. 
+                    This is all about me. If I obtain more achievements, I'll update it to my Webpage. Thank You! </p>
+                    
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span><b>Web Designing</b> </span><br>My Portfolio page <br>Ongoing project on an e-Library Webpage</li> 
+                        <li><span><b>Competitive Programming</b> </span><br>Attended 2021 ICPC Asia Dhaka regional Online Contest and solved 2 problems<br> Solved over 100+ problems in different coding sites like Codeforces, Codechef etc.</li> 
+                        <li><span><b>Programming Languages</b></span><br>C, C++ <br> HTML, CSS, JavaScript <br> Python, Java</li>
+                        <li><span><b>Softwares</b></span><br> MS Word, MS Excel, OBS Studio, Draw.io and many others</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span><b>University Ambassador</b></span><br>Jun - 2022 <br>Issued by ICT Olympiad Bangladesh</li> 
+                        <li><span><b>Software Developer Internship</b> </span><br>Dec 2021 - Feb 2022 <br> Completed a 3 months Internship under a company named GAOTek Inc.</li> 
+                    </ul>
+                </div>
+                <div class="tab-contents " id="education">
+                    <ul>
+                        <li><span><b>Secondary School Certificate</b> </span><br>2016 <br> GPA - 5.00 <br>Badda Alatunnessa Higher Secondary School</li> 
+                        <li><span><b>Higher Secondary School Certificate</b> </span><br>2018 <br>GPA - 5.00 <br>Dhaka College</li> 
+                        <li><span><b>Bachelor of Science</b></span><br>2019 - Present <br> Computer Science and Engineering <br>Mymensingh Enginneering College</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span><b>ICPC Asia Dhaka Regional Online Contest</b></span><br> Sep - 2022  <br>Ranked 4th position in our campus. Unfortunately, unable to qualify for the 2nd phase.</li> 
+                        <li><span><b>ASL Brainiac Coding Contest</b></span><br>Jun - 2022 <br> Ranked 5th position</li> 
+                        <li><span><b>Independence Day Programming Contest</b></span><br>Mar - 2022 <br> Ranked 1st place among 15 contestants</li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+</div> 
+
+<!-- ------------services---------------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title"> <br> <br> <br> <br> My Services</h1>
+        <div class="services-list">
+            <div>
+                    <!-- fontawesome.com -->
+                <i class="fa-solid fa-code"></i>  
+                <h2>Web Design</h2>
+                <p>I can build webpages with HTML, CSS and JavaScript programming languages. As I am ametuer so I am not professional in making of responsive webpages. 
+                   Give me a demo of the webpage and I'll try to create them.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h2>Problem Solving</h2>
+                <p>I have solved various problems of arrays, strings, number theories, bootstraps, maths and so on. I can solve problems which have less than 1000 ratings.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
