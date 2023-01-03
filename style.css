@@ -96,7 +96,7 @@ nav ul li a:hover::after{
 }
 .about-col-2{
     flex-basis: 60%;
-    /* padding: 100px; */
+    padding: 100px;
     padding-top: 1px;
 }
 .sub-tittle{
@@ -358,6 +358,15 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 600px){
+    #about{
+        padding: 10px;
+    }
+    #about p{
+        height: auto;
+    }
+    .about-col-2{
+        padding: 0px;
+    }
     #header{
         background-image: url(images/phone-background.png);
     }
@@ -368,6 +377,9 @@ nav .fa-solid{
     }
     .header-text h1{
         font-size: 30px;        
+    }
+    nav{
+        position:relative;
     }
     nav .fa-solid{
         display: block;
